@@ -1,6 +1,6 @@
 package tank;
 
-public class random {
+public class random { 
 
 	public static void main(String[] args) throws InterruptedException {
 		// 
