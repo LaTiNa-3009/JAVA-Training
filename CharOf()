@@ -1,0 +1,33 @@
+package tank;
+
+public class random {
+
+	public static void main(String[] args) throws InterruptedException {
+		// 
+		long number=System.currentTimeMillis();
+		String str=String.valueOf(number);
+		int result = 0;
+		
+		System.out.println("Строка цифр  "+str);
+		System.out.println("Сума цифр  "+calcStr(str));
+		result = calcStr(str)%4+1;
+		System.out.println("Случайное число 1..4:   " + result);
+		
+		
+	}
+	public static int calcStr(String str){ // возвращает сумму последних 4 цифр между собой
+		int i = 0,result=0;
+		String endStr=str.substring(str.length()-4);
+		System.out.println("последние 4 цифры   "+endStr);
+		while (i<endStr.length()){
+			result+=Integer.parseInt(endStr.substring(i,i+1)); // Это рабочий код
+			// System.out.println("endStr.charAt(i)  "+endStr.charAt(i)); //Этот выдает -1
+			// result+=Integer.valueOf(endStr.charAt(i));                 //Этот выдает -1
+			i++;
+			}
+		
+		return result;
+		
+	}
+
+}
